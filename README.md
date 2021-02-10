@@ -1,2 +1,2 @@
 # python_cert
-Python apps created while preparing for python certifications
+Python apps created while preparing for python certifications.
