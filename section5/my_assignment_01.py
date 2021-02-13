@@ -31,14 +31,12 @@ class Bird(Animal):
         print('Bird '+ self.name + ' Constructed!')
 
     def move(self):
-        print("Bird flying...")
+        print(self.name + " flying...")
 
 class   Parrot(Bird):
 
     def __init__(self, bird_name, bird_age):
         Bird.__init__(self, bird_name, bird_age)
-        # self.name = bird_name
-        # self.age  = bird_age
         print('Parrot '+self.name+ ' Constructed!')
 
     def talk(self):
@@ -54,6 +52,9 @@ class Fish(Animal):
 
     def move(self):
         print("Fish swimming...")
+    
+    def eat(self):
+        print("Eating minnow...")
 
 class Dog(Animal):
 
@@ -75,4 +76,7 @@ print(mango.name)
 mango.move()
 mango.talk()
 
-
+fishy = Fish('Fishy', 1)
+print("\nAnd my fish is named {0}".format(fishy.name))
+fishy.move()
+fishy.eat()
