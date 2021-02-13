@@ -28,6 +28,51 @@ class Bird(Animal):
         Animal.__init__(self)
         self.name = bird_name
         self.age  = bird_age
+        print('Bird '+ self.name + ' Constructed!')
 
     def move(self):
         print("Bird flying...")
+
+class   Parrot(Bird):
+
+    def __init__(self, bird_name, bird_age):
+        Bird.__init__(self, bird_name, bird_age)
+        # self.name = bird_name
+        # self.age  = bird_age
+        print('Parrot '+self.name+ ' Constructed!')
+
+    def talk(self):
+        print(str(self.name)+" says 'You are a dork!'")
+
+
+class Fish(Animal):
+
+    def __init__(self, fish_name, fish_age):
+        Animal.__init__(self)
+        self.name = fish_name
+        self.age  = fish_age
+
+    def move(self):
+        print("Fish swimming...")
+
+class Dog(Animal):
+
+    def __init__(self, dog_name, dog_age):
+        Animal.__init__(self)
+        self.name = dog_name
+        self.age  = dog_age
+    
+    def move(self):
+        print("Dog running...")
+
+# my_dog = Dog('Fido', 7)
+# print(my_dog.name)
+# my_dog.move()
+# my_dog.eat()
+
+mango = Parrot('Mango', 25)
+print(mango.name)
+mango.move()
+mango.talk()
+
+
