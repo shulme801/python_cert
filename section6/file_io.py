@@ -20,12 +20,11 @@ try:
         my_file = open('/Users/shulme801/Dropbox/newCode/src/shulme801/python_cert/Section6/sample.txt', mode = 'r')
         print(my_file.read())
         # result = 2 + '2'
-except FileNotFoundError:
-    print("file does not exist: FileNotFoundError")
-except TypeError:
-    print("there was a type error")
+except IOError:
+    print("file IO error")
 except:
-    print("another error occurred")
+    print("some other error occurred")
 finally:
-    print("Even with an exception, this statement will always be run")
-    my_file.close()
+    if my_file != None:
+        my_file.close()
+    print("this statement will always be run, with or without an exception")
