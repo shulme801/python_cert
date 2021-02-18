@@ -12,11 +12,19 @@ def count_the_bard(args):
 
     cwd = args[0]
     # if user didn't give us a current working directory to search, use the directory where we are at
-    if (cwd == ""):
+    if ((cwd == "") or  (not os.path.isdir(cwd))):
         cwd = os.getcwd()
 
-    if (not os.path.isdir(cwd)):
-        return False
+    file_list = []
+
+    for root, dirs, files in os.walk(cwd):
+        print(dirs)
+        for file in files:
+            #append the file name to the list
+            file_list.append(os.path.join(root,file))
+    # print out all the file names
+    for name in file_list:
+        print(name)
 
 print(count_the_bard(sys.argv[1:]))
 
