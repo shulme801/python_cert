@@ -64,4 +64,4 @@ print("s is originally "+s)
 for i in range(len(s)):
     i = s[i].upper()
 print(s, end="")
-
+print()
