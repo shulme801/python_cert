@@ -17,8 +17,8 @@ def count_the_bard(args):
 
     file_list = []
 
-    for root, dirs, files in os.walk(cwd):
-        print(dirs)
+    for root, dirs, files in os.walk(cwd,topdown=True):
+        files = [f for f in files if ((not f[0] == ''.'') and ())
         for file in files:
             #append the file name to the list
             file_list.append(os.path.join(root,file))
